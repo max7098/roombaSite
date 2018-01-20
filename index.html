@@ -1,1 +1,30 @@
-kljsdlkfjasd
+<html>
+    <head>
+        <h1>Welcome to RumbaPI</h1>
+    </head>
+    <body>
+    <script>
+        window.onkeydown=function(e){
+            var key = e.keyCode ? e.keyCode : e.which
+            console.log(key)
+            if(key==38)//up
+            {
+                console.log("up")
+            }
+            else if(key==39)//right
+            {
+                console.log("right")
+            }
+            else if(key==40)//down
+            {
+                console.log("down")
+            }
+            else if(key==37)//left
+            {
+                console.log("left")
+            }
+        }
+    </script>
+    </body>
+
+</html>
