@@ -1,30 +1,31 @@
 <html>
     <head>
-        <h1>Welcome to RumbaPI</h1>
+        <h1>Welcome to RoombaPI</h1>
     </head>
     <body>
-    <script>
-        window.onkeydown=function(e){
-            var key = e.keyCode ? e.keyCode : e.which
-            console.log(key)
-            if(key==38)//up
-            {
-                console.log("up")
+        <script src='https://code.jquery.com/jquery-3.2.1.js'></script>
+        <script>
+            window.onkeydown=function(e){
+                var key = e.keyCode ? e.keyCode : e.which
+                console.log(key)
+                if(key==38)//up
+                {
+                    console.log("up")
+                    //$.post()
+                }
+                else if(key==39)//right
+                {
+                    console.log("right")
+                }
+                else if(key==40)//down
+                {
+                    console.log("down")
+                }
+                else if(key==37)//left
+                {
+                    console.log("left")
+                }
             }
-            else if(key==39)//right
-            {
-                console.log("right")
-            }
-            else if(key==40)//down
-            {
-                console.log("down")
-            }
-            else if(key==37)//left
-            {
-                console.log("left")
-            }
-        }
-    </script>
+        </script>
     </body>
-
 </html>
