@@ -3,37 +3,12 @@
         <h1>Welcome to RoombaPI</h1>
     </head>
     <body>
+        <a id= "driveLink" href="drive">Click here to drive the roomba</a>
+        <a href="music">Click here to music the roomba</a>
         <script src='https://code.jquery.com/jquery-3.2.1.js'></script>
         <script>
-            var postURL = ""
-            window.onkeydown=function(e){
-                var key = e.keyCode ? e.keyCode : e.which
-                console.log(key)
-                if(key==38)//up
-                {
-                    console.log("up")
-                    $.post(postURL,{command:"forward"},function(data){})
-                }
-                else if(key==39)//right
-                {
-                    console.log("right")
-                    $.post(postURL,{command:"right"},function(data){})
-                }
-                else if(key==40)//down
-                {
-                    console.log("down")
-                    $.post(postURL,{command:"down"},function(data){})
-                }
-                else if(key==37)//left
-                {
-                    console.log("left")
-                    $.post(postURL,{command:"left"},function(data){})
-                }
-            }
-            window.onkeyup=function(e){
-                console.log("stop")
-                $.post(postURL,{command:"forward"},function(data){})
-            }
+            var typedPassword = prompt("ppssssssssstt... Whats the password")
+            document.getElementById("driveLink").href="drive?password="+typedPassword
         </script>
     </body>
 </html>
