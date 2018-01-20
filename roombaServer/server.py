@@ -18,6 +18,7 @@ def index():
                 command = request.body['command']
                 if command == "start":
                     roomba.start()
+                    return "starting the roomba"
 
                 
             else:
