@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <h1>Driving Page</h1>
+    </head>
+    <body>
+        <script src='https://code.jquery.com/jquery-3.2.1.js'></script>
+        <script>
+            var postURL = "localhost:5000"
+            var typedPassword = new URL(window.location.href).searchParams.get("password")
+            window.onkeydown=function(e){
+                var key = e.keyCode ? e.keyCode : e.which
+                console.log(key)
+                if(key==38)//up
+                {
+                    console.log("up")
+                    $.post(postURL,{command:"forward"},function(data){})
+                }
+                else if(key==39)//right
+                {
+                    console.log("right")
+                    $.post(postURL,{command:"right"},function(data){})
+                }
+                else if(key==40)//down
+                {
+                    console.log("down")
+                    $.post(postURL,{command:"down"},function(data){})
+                }
+                else if(key==37)//left
+                {
+                    console.log("left")
+                    $.post(postURL,{command:"left"},function(data){})
+                }
+                else if(key==83)//s
+                {
+                    console.log("start")
+                    $.post(postURL,{command:"start",password:typedPassword},function(data){})
+                }
+            }
+            window.onkeyup=function(e){
+                console.log("stop")
+                $.post(postURL,{command:"forward",password:typedPassword},function(data){})
+            }
+        </script>
+    </body>
+</html>
